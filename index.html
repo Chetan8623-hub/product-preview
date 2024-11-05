@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product preview</title>
+    <style>
+          .card{
+            align-items: center;
+            width: 400px;
+            background-color: #dfd4d4;
+            border: 2px solid black;
+            border-radius: 30px;}
+        .title{
+            margin: 0;
+            padding: 0;
+            text-align: center;}
+        .price{
+            margin: 0;
+            padding: 0;
+            text-align: center;}
+        #main-product-image {
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto; }
+        .product-img {
+            height: 70px;
+            width: 70px;
+            object-fit: contain;
+            border: 1px solid black;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer; }
+        .product-img-container {
+            display: flex;
+            justify-content: center; }
+        .btn-buy-now{
+            background-color: #0c0b0b;
+            color: white;
+            border: none;
+            padding: 5px 20px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 20px;
+            cursor: pointer;}
+    </style>
+</head>
+<body>
+<div class="card" id="card">
+    <img src="head1.jpg" id="main-product-image">
+    <h3 class="title"> WIRELESS HEADPHONE</h3>
+    <p class="price"><b>Price : </b> 899/-</p>
+    <div class="product-img-container">
+        <img src="head4.jpg" class="product-img" onclick="changeimg('head4.jpg')">
+        <img src="head5.jpg" class="product-img" onclick="changeimg('head5.jpg')">
+        <img src="head6.jpg" class="product-img" onclick="changeimg('head6.jpg')">
+        <img src="head8.jpg" class="product-img" onclick="changeimg('head8.jpg')">
+    </div>
+<button class="btn-buy-now">Buy Now</button>
+</div>
+    <script>
+        function changeimg(imgname) {
+            const mainimg = document.getElementById('main-product-image');
+            mainimg.src = imgname;}
+    </script>
+</body>
+
+</html>
